@@ -1,0 +1,49 @@
+<p>event-binding works!</p>
+<form>
+  <table>
+     <tr>
+       <th colspan="2"> Student Info </th>
+     </tr>
+    <tr>
+      <th> RollNo :</th>
+      <td><input type="number" size="20" #rno>   <span style="color:red">{{error_msg}}</span>  </td>
+    </tr>
+    <tr>
+      <th>Name :</th>
+      <td>
+        <input type="text" size="20" #name>
+      </td>
+    </tr>
+    <tr>
+      <th> Maths : </th>
+      <th><input type="number" #maths></th>
+    </tr>
+    <tr>
+      <th> Science : </th>
+      <th><input type="number" #science></th>
+    </tr>
+    <tr>
+      <th> English : </th>
+      <th><input type="number" #english></th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="button" value="save" (click)="save(rno,name,maths,science,english)" >
+        <input type="reset" value="clear">
+
+      </td>
+    </tr>
+  </table>
+
+  <h1> Student Info </h1>
+  <ul>
+    <li> Roll No: {{rollno}}  </li>
+    <li> Name :  {{ Name }} </li>
+    <li> Maths :{{ Maths}}</li>
+    <li> Science :{{ Science}}</li>
+    <li> English :{{ English}}</li>
+    <li> Total : {{Total}} </li>
+  </ul>
+
+
+</form>

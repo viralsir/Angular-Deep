@@ -1,0 +1,35 @@
+<p>two-way-binding works!</p>
+<table class="table">
+  <tr>
+    <th colspan="2"  style="text-align: center" > Student Info </th>
+  </tr>
+  <tr>
+    <th>Name :</th>
+    <td><input type="text" class="form-control" [(ngModel)]="name"  > </td>
+  </tr>
+  <tr>
+    <th>Maths :</th>
+    <td><input type="number"  class="form-control" [(ngModel)]="maths"></td>
+  </tr>
+  <tr>
+    <th>Science :</th>
+    <td><input type="number" class="form-control"  [(ngModel)]="science"></td>
+  </tr>
+  <tr>
+    <th> English :</th>
+    <td><input type="number"  class="form-control" [(ngModel)]="english" ></td>
+  </tr>
+</table>
+
+
+<hr/>
+<h2> Student Info</h2>
+<ul>
+   <li> Name : {{name}}</li>
+   <li> Maths : {{maths}}</li>
+  <li> Science : {{science}}</li>
+  <li>English : {{english}}</li>
+  <li> Total {{this.maths+this.science+this.english}}</li>
+</ul>
+
+

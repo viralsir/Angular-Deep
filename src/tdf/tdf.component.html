@@ -1,0 +1,100 @@
+<div class="row">
+    <div class="col-4">
+
+      <form action="" #StudentFormRef="ngForm" (ngSubmit)="save(StudentFormRef)">
+        <table class="table">
+          <tr>
+            <th> Student Entry Form</th>
+          </tr>
+          <tr>
+            <th> Roll No :</th>
+            <td><input class="form-control" type="number" ngModel name="rno"></td>
+          </tr>
+          <tr>
+            <th> Name :</th>
+            <td><input type="text" ngModel class="form-control" name="name"></td>
+          </tr>
+          <tr>
+            <th> Maths :</th>
+            <td><input type="number" class="form-control" ngModel name="maths"></td>
+          </tr>
+          <tr>
+            <th> Science  :</th>
+            <td><input type="number" class="form-control" ngModel name="science"></td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input class="btn btn-outline-primary m-3" type="submit" value="Save">
+              <input class="btn btn-outline-info m-3" type="reset" value="clear">
+            </td>
+          </tr>
+        </table>
+
+      </form>
+
+    </div>
+    <div class="col-8">
+          <table class="table table-primary">
+            <tr>
+                <th> sr.no</th>
+                 <th> RollNo</th>
+                <th> Name</th>
+                <th> Maths</th>
+                 <th> Science</th>
+                 <th> Pass/Fail</th>
+            </tr>
+            @for(student of studentlist;track $index){
+               <tr>
+                 <th> {{$index+1}}</th>
+                  <td> {{student.rno}}</td>
+                   <td>{{student.name}}</td>
+                    <td>{{student.maths}}</td>
+                    <td>{{student.science}}</td>
+
+                 @if ( student.maths >=35 && student.science>=35) {
+                       <td style="color:green"> Pass </td>
+                 }
+                 @else{
+                   <td style="color:red"> Fail  </td>
+                 }
+
+               </tr>
+            }
+          </table>
+    </div>
+
+</div>
+<!--
+<form action="" #StudentFormRef="ngForm" (ngSubmit)="save(StudentFormRef)">
+<table>
+        <tr>
+           <th> Student Entry Form</th>
+        </tr>
+        <tr>
+          <th> Roll No :</th>
+          <td><input type="number" ngModel name="rno"></td>
+        </tr>
+       <tr>
+          <th> Name :</th>
+           <td><input type="text" ngModel name="name"></td>
+       </tr>
+       <tr>
+         <th> Maths :</th>
+         <td><input type="number" ngModel name="maths"></td>
+       </tr>
+      <tr>
+        <th> Science  :</th>
+        <td><input type="number" ngModel name="science"></td>
+      </tr>
+
+  <tr>
+          <td>
+            <input type="submit" value="Save">
+            <input type="reset" value="clear">
+          </td>
+       </tr>
+</table>
+
+</form>
+-->

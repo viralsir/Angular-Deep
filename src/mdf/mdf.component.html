@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-4">
+      <form [formGroup]="StudentForm" (ngSubmit)="save()" >
+        <table>
+          <tr>
+            <th colspan="2">
+              Student Entry Form
+            </th>
+          </tr>
+          <tr>
+            <th> Roll No:</th>
+            <td><input type="number"   formControlName="rollno">  </td>
+          </tr>
+          <tr>
+            <th> Name :</th>
+            <td><input type="text"   formControlName="name"> (must be longer than 3 character) </td>
+          </tr>
+          <tr>
+            <th> Maths :</th>
+            <td><input type="number"   formControlName="maths"> </td>
+          </tr>
+
+          <tr>
+            <th> Science :</th>
+            <td><input type="number"   formControlName="science"> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="submit"  [disabled]="StudentForm.invalid"   value="save">
+              <input type="reset" value="clear">
+              <br/>
+                form valid : {{StudentForm.valid}}
+              <br/>
+                form invalid : {{StudentForm.invalid}}
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="col-8">
+      <table>
+          <tr>
+            <th> Roll No </th>
+            <th> Name</th>
+            <th> Maths </th>
+            <th> Science </th>
+          </tr>
+        @for (student of StudentList;track $index)
+        {
+           <tr>
+              <td> {{student.rollno}}</td>
+             <td> {{student.name}}</td>
+              <td>{{student.maths}}</td>
+             <td> {{student.science}}</td>
+           </tr>
+        }
+      </table>
+
+    </div>
+</div>

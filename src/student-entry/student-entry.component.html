@@ -1,0 +1,28 @@
+<p>student-entry works!</p>
+
+  <table>
+    <tr>
+      <th>Student Entry Form</th>
+    </tr>
+    <tr>
+      <td> Roll No:</td>
+      <td><input type="number" [(ngModel)]="rollno" > </td>
+    </tr>
+    <tr>
+       <th> Name :</th>
+      <td>
+        <input type="text" [(ngModel)]="name">
+      </td>
+    </tr>
+    <tr>
+       <td>
+         <input type="button" value="save" (click)="save()">
+         <input type="button" value="clear">
+       </td>
+    </tr>
+  </table>
+
+<h1>
+    student roll no :{{rollno}}    <br/>
+    Name : {{name}}
+</h1>

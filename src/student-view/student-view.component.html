@@ -1,0 +1,15 @@
+<p>student-view works!</p>
+<table>
+   <tr>
+      <th> Roll No</th>
+     <th> Name</th>
+   </tr>
+  @for (student of studentservice.studentlist; track $index)
+  {
+       <tr>
+         <td>{{student.rollno}}</td>
+         <td>{{student.name}}</td>
+       </tr>
+
+  }
+</table>

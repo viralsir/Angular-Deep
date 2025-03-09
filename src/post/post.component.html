@@ -1,0 +1,21 @@
+<h1>
+  <input type="button" value="LoadData" (click)="LoadData()">
+</h1>
+<table class="table table-borderless">
+  <tr>
+    <th> User Id </th>
+    <th> Id      </th>
+    <th> Title   </th>
+    <th> Body    </th>
+  </tr>
+  @for(post of postService.postList;track $index){
+
+    <tr>
+      <td> {{post.userId}}</td>
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.body}}</td>
+    </tr>
+
+  }
+</table>

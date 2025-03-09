@@ -8,6 +8,7 @@ import {TdfComponent} from '../tdf/tdf.component';
 import {MdfComponent} from '../mdf/mdf.component';
 import {StudentEntryComponent} from '../student-entry/student-entry.component';
 import {StudentViewComponent} from '../student-view/student-view.component';
+import {PostComponent} from '../post/post.component';
 
 export const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -19,5 +20,6 @@ export const routes: Routes = [
   {path:"mdf",component:MdfComponent},
   {path:"Student-Entry",component:StudentEntryComponent},
   {path:"Student-View",component:StudentViewComponent},
+  {path:"Fake-api",component:PostComponent}
 
 ];
